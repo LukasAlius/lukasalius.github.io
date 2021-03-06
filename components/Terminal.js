@@ -10,7 +10,7 @@ const Terminal = ({showGameViewport = false}) => {
     )), []);
 
     return (
-        <div className="bg-terminal-900 rounded-3xl min-h-screen md:min-h-full mt-20 md:mt-0 p-5 z-10 max-w-4xl shadow-lg">
+        <div className="bg-terminal-900 rounded-3xl min-h-screen md:min-h-full mt-20 md:mt-0 p-5 max-w-4xl shadow-lg">
             <div className="flex pb-6 items-center">
                 <div className="flex space-x-2">
                     <div className="rounded-full h-5 w-5 bg-red-500 hover:bg-red-400 cursor-pointer"></div>

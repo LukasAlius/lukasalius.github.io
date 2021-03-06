@@ -15,12 +15,12 @@ export default [
     {
         key: '4',
         lineNumber: '13',
-        text: 'I’m React, React-Native developer',
+        text: 'I’m React, React-Native developer.',
     },
     {
         key: '5',
         lineNumber: '14',
-        text: 'Current goal: become a full stack developer',
+        text: 'Current goal: transition to full stack development.',
     },
     {
         key: '6',
