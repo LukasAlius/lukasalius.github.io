@@ -27,8 +27,8 @@ const RainBackground = () => {
     }, []);
     
     const rainDrops = useMemo(() => rain.map(item =>
-        <div key={item.key} className="absolute bottom-full w-5 h-20 pointer-events-none animate-drop" style={{left: `${item.left}%`, top: '-10%', animationDelay: `0.${item.animationDelay}s`, animationDuration: `0.5${item.animationDuration}s`}}>
-                <div className="w-0.5 h-3/5 bg-gradient-to-t from-indigo-500 dark:from-indigo-100 animate-stem" style={{animationDelay: `0.${item.animationDelay}s`, animationDuration: `0.5${item.animationDuration}s`}}></div>
+        <div key={item.key} className="absolute bottom-full w-5 h-20 pointer-events-none animate-drop" style={{left: `${item.left}%`, top: '-10%', animationDelay: `0.${item.animationDelay}s`, animationDuration: `0.8${item.animationDuration}s`}}>
+                <div className="w-0.5 h-3/5 bg-gradient-to-t from-indigo-500 dark:from-indigo-100 animate-stem" style={{animationDelay: `0.${item.animationDelay}s`, animationDuration: `0.8${item.animationDuration}s`}}></div>
             </div>
     ), []);
     
