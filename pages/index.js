@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
+import RainBackground from '../components/RainBackground';
 import SecretMessage from '../components/SecretMessage';
 import Terminal from '../components/Terminal';
 
@@ -14,7 +15,7 @@ export default function Home() {
 
 
   return (
-    <div className="min-h-screen flex flex-row justify-center items-center bg-green-50">
+    <div className="min-h-screen flex flex-row justify-center items-center bg-green-100 dark:bg-terminal-700">
       <Head>
         <title>Lukas Alius. Developer</title>
         <link rel="icon" href="/favicon.ico" />
@@ -26,9 +27,10 @@ export default function Home() {
           />
       </Head>
 
+      <RainBackground />
       {!isLoading && <SecretMessage />}
 
-      <main className="z-10 flex">
+      <main className="z-20 flex">
         <Terminal showGameViewport={showGameViewport} />
       </main>
     </div>
