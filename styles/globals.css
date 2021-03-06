@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "Fira code";
+  src: url("/fonts/fira-code/FiraCode-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
