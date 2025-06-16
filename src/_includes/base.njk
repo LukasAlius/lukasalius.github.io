@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+    <div class="rain-container" id="rainContainer"></div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="theme-icon">🌙</span>
+    </button>
+    {{ content | safe }}
+    <script src="/main.js"></script>
+</body>
+</html>
