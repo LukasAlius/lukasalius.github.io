@@ -1,17 +1,11 @@
 :root {
   --bg-primary: #0f0f0f;
   --bg-secondary: #22212c;
-  --bg-tertiary: #0d1117;
   --bg-header: #22212c;
   --border-primary: #30363d;
-  --border-secondary: #21262d;
   --text-primary: #c9d1d9;
-  --text-secondary: #8b949e;
   --text-muted: #484f58;
   --rain-color: rgba(100, 149, 237, 0.6);
-  --keyword: #ff7b72;
-  --variable: #7ee787;
-  --operator: #79c0ff;
   --property: #ffa657;
   --string: #a5d6ff;
   --link: #58a6ff;
@@ -24,17 +18,11 @@
 [data-theme="light"] {
   --bg-primary: #ddefff;
   --bg-secondary: #f6f8fa;
-  --bg-tertiary: #ffffff;
   --bg-header: #f6f8fa;
   --border-primary: #d0d7de;
-  --border-secondary: #d8dee4;
   --text-primary: #24292f;
-  --text-secondary: #656d76;
   --text-muted: #848d97;
   --rain-color: rgba(100, 149, 237, 0.4);
-  --keyword: #cf222e;
-  --variable: #116329;
-  --operator: #0969da;
   --property: #953800;
   --string: #0a3069;
   --link: #0969da;
@@ -157,6 +145,10 @@ body {
   gap: 8px;
 }
 
+.terminal-title {
+  margin-left: 8px;
+}
+
 .control {
   width: 16px;
   height: 16px;
@@ -185,8 +177,8 @@ body {
 }
 
 .line-number {
-  padding: 0 12px;
   display: flex;
+  padding: 0 12px;
   color: var(--text-muted);
   font-size: 1rem;
   user-select: none;
@@ -200,31 +192,6 @@ body {
   display: flex;
   flex-direction: row;
   padding: 0.3rem 0;
-}
-
-.code-line.indent > .line-number {
-  margin-right: 1rem;
-}
-
-.keyword {
-  color: var(--keyword);
-  transition: color 0.3s ease;
-}
-
-.variable {
-  color: var(--variable);
-  transition: color 0.3s ease;
-}
-
-.operator {
-  color: var(--operator);
-  transition: color 0.3s ease;
-}
-
-.punctuation {
-  color: var(--text-primary);
-  transition: color 0.3s ease;
-  margin-right: 0.25rem;
 }
 
 .property {
@@ -241,6 +208,7 @@ body {
   color: var(--link);
   text-decoration: none;
   transition: color 0.3s ease;
+  margin-left: 8px;
 }
 
 .link:hover {
@@ -271,8 +239,14 @@ body {
 
 @media (max-width: 768px) {
   .terminal {
-    width: 95vw;
-    margin: 20px;
+    max-width: 100%;
+  }
+
+  .container {
+    display: flex;
+    height: 90vh;
+    align-self: end;
+    width: 100%;
   }
 
   .code-content {
@@ -280,9 +254,22 @@ body {
     font-size: 0.75rem;
   }
 
-  .line-numbers {
-    padding: 0 8px;
-    font-size: 0.75rem;
+  .line-number,
+  .cursor {
+    display: none;
+  }
+
+  .code-line {
+    padding: 14px 16px;
+    flex-wrap: wrap;
+  }
+
+  .property {
+    width: 100%;
+  }
+
+  .code-line > .link:first-of-type {
+    margin-left: 0;
   }
 
   .theme-toggle {
@@ -291,5 +278,11 @@ body {
     width: 40px;
     height: 40px;
     font-size: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rain-container {
+    display: none;
   }
 }

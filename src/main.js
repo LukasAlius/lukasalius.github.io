@@ -68,6 +68,9 @@ function toggleTheme() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  randomRain();
+  if (window.matchMedia("(prefers-reduced-motion: no-preference)").matches) {
+    randomRain();
+  }
+
   initializeTheme();
 });
